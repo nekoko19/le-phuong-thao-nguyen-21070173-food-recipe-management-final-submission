@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  publication_date: 2023-03-29
+  description: MyString
+  calories_per_serving: 1
+  category: one
+  review: MyString
+  instruction: MyText
+
+two:
+  title: MyString
+  publication_date: 2023-03-29
+  description: MyString
+  calories_per_serving: 1
+  category: two
+  review: MyString
+  instruction: MyText

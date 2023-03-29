@@ -1,0 +1,37 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Instruction</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to instructions_path, class: button_class(theme: "transparent") do %>
+      All Instructions
+      <% end %>
+      <%= link_to edit_instruction_path(@instruction), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Prep time:</p>
+        <p><%= @instruction.prep_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Cook time:</p>
+        <p><%= @instruction.cook_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Ingredient:</p>
+        <p><%= @instruction.ingredient %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Description:</p>
+        <p><%= @instruction.description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Recipe:</p>
+        <p><%= @instruction.recipe.name %></p>
+      </li>
+  </ul>
+</div>

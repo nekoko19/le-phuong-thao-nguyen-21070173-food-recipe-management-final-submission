@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment: MyString
+  date: 2023-03-29
+  user: one
+  recipe: one
+
+two:
+  comment: MyString
+  date: 2023-03-29
+  user: two
+  recipe: two
