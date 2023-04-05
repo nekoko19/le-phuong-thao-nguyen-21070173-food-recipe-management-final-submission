@@ -29,16 +29,11 @@
       </div>
   <div class="mb-6">
         <%= form.label :category_id, class: label_class %>
-        <%= form.select :category_id, options_from_collection_for_select(
-          Category.all, 'id', 'name', selected = recipe.category_id), class: label_class %>
+        <%= form.select :category_id, options_from_collection_for_select(Category.all, 'id', 'name', selected = recipe.category_id), class: label_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :review, class: label_class %>
-          <%= form.text_field :review, class: input_class %>
-      </div>
-  <div class="mb-6">
-        <%= form.label :instruction, class: label_class %>
-          <%= form.text_area :instruction, class: input_class %>
+        <%= form.label :instruction_id, class: label_class %>
+          <%= form.text_field :instruction_id, class: input_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

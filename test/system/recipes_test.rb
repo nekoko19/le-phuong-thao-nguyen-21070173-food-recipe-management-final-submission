@@ -17,9 +17,8 @@ class RecipesTest < ApplicationSystemTestCase
     fill_in "Calories per serving", with: @recipe.calories_per_serving
     fill_in "Category", with: @recipe.category_id
     fill_in "Description", with: @recipe.description
-    fill_in "Instruction", with: @recipe.instruction
+    fill_in "Instruction", with: @recipe.instruction_id
     fill_in "Publication date", with: @recipe.publication_date
-    fill_in "Review", with: @recipe.review
     fill_in "Title", with: @recipe.title
     click_on "Create Recipe"
 
@@ -34,9 +33,8 @@ class RecipesTest < ApplicationSystemTestCase
     fill_in "Calories per serving", with: @recipe.calories_per_serving
     fill_in "Category", with: @recipe.category_id
     fill_in "Description", with: @recipe.description
-    fill_in "Instruction", with: @recipe.instruction
+    fill_in "Instruction", with: @recipe.instruction_id
     fill_in "Publication date", with: @recipe.publication_date
-    fill_in "Review", with: @recipe.review
     fill_in "Title", with: @recipe.title
     click_on "Update Recipe"
 

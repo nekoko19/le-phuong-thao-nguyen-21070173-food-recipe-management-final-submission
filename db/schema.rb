@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_29_041128) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_05_051419) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -56,6 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_041128) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "end_users", force: :cascade do |t|
+    t.string "username"
+    t.date "date_of_birth"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -72,10 +80,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_041128) do
     t.string "cook_time"
     t.text "ingredient"
     t.text "description"
-    t.integer "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipe_id"], name: "index_instructions_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -84,11 +90,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_041128) do
     t.string "description"
     t.integer "calories_per_serving"
     t.integer "category_id", null: false
-    t.string "review"
-    t.text "instruction"
+    t.integer "instruction_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_recipes_on_category_id"
+    t.index ["instruction_id"], name: "index_recipes_on_instruction_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -119,8 +125,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_041128) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "instructions", "recipes"
   add_foreign_key "recipes", "categories"
+  add_foreign_key "recipes", "instructions"
   add_foreign_key "reviews", "recipes"
   add_foreign_key "reviews", "users"
 end

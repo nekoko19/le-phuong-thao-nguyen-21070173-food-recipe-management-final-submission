@@ -18,7 +18,6 @@ class InstructionsTest < ApplicationSystemTestCase
     fill_in "Description", with: @instruction.description
     fill_in "Ingredient", with: @instruction.ingredient
     fill_in "Prep time", with: @instruction.prep_time
-    fill_in "Recipe", with: @instruction.recipe_id
     click_on "Create Instruction"
 
     assert_text "Instruction was successfully created"
@@ -33,7 +32,6 @@ class InstructionsTest < ApplicationSystemTestCase
     fill_in "Description", with: @instruction.description
     fill_in "Ingredient", with: @instruction.ingredient
     fill_in "Prep time", with: @instruction.prep_time
-    fill_in "Recipe", with: @instruction.recipe_id
     click_on "Update Instruction"
 
     assert_text "Instruction was successfully updated"

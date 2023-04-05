@@ -5,11 +5,9 @@ one:
   cook_time: MyString
   ingredient: MyText
   description: MyText
-  recipe: one
 
 two:
   prep_time: MyString
   cook_time: MyString
   ingredient: MyText
   description: MyText
-  recipe: two

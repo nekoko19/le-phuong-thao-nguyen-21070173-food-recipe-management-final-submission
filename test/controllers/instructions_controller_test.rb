@@ -17,7 +17,7 @@ class InstructionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create instruction" do
     assert_difference("Instruction.count") do
-      post instructions_url, params: { instruction: { cook_time: @instruction.cook_time, description: @instruction.description, ingredient: @instruction.ingredient, prep_time: @instruction.prep_time, recipe_id: @instruction.recipe_id } }
+      post instructions_url, params: { instruction: { cook_time: @instruction.cook_time, description: @instruction.description, ingredient: @instruction.ingredient, prep_time: @instruction.prep_time } }
     end
 
     assert_redirected_to instruction_url(Instruction.last)
@@ -34,7 +34,7 @@ class InstructionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update instruction" do
-    patch instruction_url(@instruction), params: { instruction: { cook_time: @instruction.cook_time, description: @instruction.description, ingredient: @instruction.ingredient, prep_time: @instruction.prep_time, recipe_id: @instruction.recipe_id } }
+    patch instruction_url(@instruction), params: { instruction: { cook_time: @instruction.cook_time, description: @instruction.description, ingredient: @instruction.ingredient, prep_time: @instruction.prep_time } }
     assert_redirected_to instruction_url(@instruction)
   end
 

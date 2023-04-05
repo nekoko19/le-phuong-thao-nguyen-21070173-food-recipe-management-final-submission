@@ -21,12 +21,11 @@
       </div>
   <div class="mb-6">
         <%= form.label :user_id, class: label_class %>
-          <%= form.text_field :user_id, class: input_class %>
+        <%= form.select :user_id, options_from_collection_for_select(User.all, 'id', 'username', selected = review.user_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :recipe_id, class: label_class %>
-          <%= form.text_field :recipe_id, class: input_class %>
-      </div>
+        <%= form.select :recipe_id, options_from_collection_for_select(Recipe.all, 'id', 'title', selected = review.recipe_id), class: label_class %>
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

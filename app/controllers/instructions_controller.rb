@@ -65,6 +65,6 @@ class InstructionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def instruction_params
-      params.require(:instruction).permit(:prep_time, :cook_time, :ingredient, :description, :recipe_id)
+      params.require(:instruction).permit(:prep_time, :cook_time, :ingredient, :description)
     end
 end

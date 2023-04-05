@@ -6,8 +6,7 @@ class CreateRecipes < ActiveRecord::Migration[7.0]
       t.string :description
       t.integer :calories_per_serving
       t.references :category, null: false, foreign_key: true
-      t.string :review
-      t.text :instruction
+      t.references :instruction, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -17,7 +17,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create recipe" do
     assert_difference("Recipe.count") do
-      post recipes_url, params: { recipe: { calories_per_serving: @recipe.calories_per_serving, category_id: @recipe.category_id, description: @recipe.description, instruction: @recipe.instruction, publication_date: @recipe.publication_date, review: @recipe.review, title: @recipe.title } }
+      post recipes_url, params: { recipe: { calories_per_serving: @recipe.calories_per_serving, category_id: @recipe.category_id, description: @recipe.description, instruction_id: @recipe.instruction_id, publication_date: @recipe.publication_date, title: @recipe.title } }
     end
 
     assert_redirected_to recipe_url(Recipe.last)
@@ -34,7 +34,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update recipe" do
-    patch recipe_url(@recipe), params: { recipe: { calories_per_serving: @recipe.calories_per_serving, category_id: @recipe.category_id, description: @recipe.description, instruction: @recipe.instruction, publication_date: @recipe.publication_date, review: @recipe.review, title: @recipe.title } }
+    patch recipe_url(@recipe), params: { recipe: { calories_per_serving: @recipe.calories_per_serving, category_id: @recipe.category_id, description: @recipe.description, instruction_id: @recipe.instruction_id, publication_date: @recipe.publication_date, title: @recipe.title } }
     assert_redirected_to recipe_url(@recipe)
   end
 
