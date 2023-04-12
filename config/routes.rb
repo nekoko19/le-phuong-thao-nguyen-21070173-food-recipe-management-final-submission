@@ -1,10 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :reviews
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :recipes
   resources :end_users
-  resources :reviews
   resources :instructions
   resources :categories
     authenticate :user, lambda { |u| u.admin? } do

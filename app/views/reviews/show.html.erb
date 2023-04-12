@@ -22,12 +22,12 @@
         <p><%= @review.date %></p>
       </li>
       <li>
-        <p class="font-semibold">User:</p>
-        <p><%= @review.user %></p>
+        <p class="font-semibold">End user:</p>
+        <p><%= @review.end_user.username %></p>
       </li>
       <li>
         <p class="font-semibold">Recipe:</p>
-        <p><%= @review.recipe %></p>
+        <p><%= @review.recipe.title %></p>
       </li>
   </ul>
 </div>

@@ -2,12 +2,12 @@
 
 one:
   comment: MyString
-  date: 2023-04-05
-  user: one
+  date: 2023-04-12
+  end_user: one
   recipe: one
 
 two:
   comment: MyString
-  date: 2023-04-05
-  user: two
+  date: 2023-04-12
+  end_user: two
   recipe: two

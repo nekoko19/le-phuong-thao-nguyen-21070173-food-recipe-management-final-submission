@@ -20,12 +20,15 @@
           <%= form.date_field :date, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :user_id, class: label_class %>
-        <%= form.select :user_id, options_from_collection_for_select(User.all, 'id', 'username', selected = review.user_id), class: label_class %>
+        <%= form.label :end_user_id, class: label_class %>
+        <%= form.select :end_user_id, options_from_collection_for_select(
+          EndUser.all, 'id', 'username', selected = review.end_user_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :recipe_id, class: label_class %>
-        <%= form.select :recipe_id, options_from_collection_for_select(Recipe.all, 'id', 'title', selected = review.recipe_id), class: label_class %>
+        <%= form.select :recipe_id, options_from_collection_for_select(
+          Recipe.all, 'id', 'title', selected = review.recipe_id), class: label_class %>
+      </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

@@ -16,8 +16,8 @@ class ReviewsTest < ApplicationSystemTestCase
 
     fill_in "Comment", with: @review.comment
     fill_in "Date", with: @review.date
+    fill_in "End user", with: @review.end_user_id
     fill_in "Recipe", with: @review.recipe_id
-    fill_in "User", with: @review.user_id
     click_on "Create Review"
 
     assert_text "Review was successfully created"
@@ -30,8 +30,8 @@ class ReviewsTest < ApplicationSystemTestCase
 
     fill_in "Comment", with: @review.comment
     fill_in "Date", with: @review.date
+    fill_in "End user", with: @review.end_user_id
     fill_in "Recipe", with: @review.recipe_id
-    fill_in "User", with: @review.user_id
     click_on "Update Review"
 
     assert_text "Review was successfully updated"
